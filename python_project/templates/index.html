@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>電影預約網站</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+
+        
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">1917</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded " href="#portfolio">訂位狀況</a></li>
+                    <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li> -->
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">訂位</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead bg-primary text-black text-center mt-5" id="page-top">
+        <div class="container d-flex align-items-center flex-column mb-5">
+            <!-- Masthead Avatar Image-->
+            <div class="row">
+                <div class="col-8">
+                    <img class="masthead img-thumbnail masthead-subheading" src="https://img.myvideo.net.tw/images/UNI040/0000/1352/202004091359091500_2016.jpg" />
+                </div>
+                
+                <div class="col-4">
+            <!-- Icon Divider-->
+                    <div class="divider-custom">
+                        
+                        <div class="divider-custom-line"></div>
+                        <h1 class="masthead-heading text-uppercase mb-0">1917</h1>
+                        <div class="divider-custom-line"></div>
+                    </div>
+                    <p class="font-weight-light mb-0">　　第一次世界大戰進入最激烈之際，兩名年輕的英國士兵史考菲以及布雷克受到指派，執行一場看似不可能的任務。他們必須和時間賽跑，冒險進入敵區傳遞一個重要訊息，試圖阻止一場對數百名士兵的致命攻擊。</p>
+                </div>
+            </div>
+            <!-- Masthead Heading-->
+            
+            </div>
+        
+            <!-- Masthead Subheading-->
+           
+        </div>
+    </header>
+    <section class="page-section mb-5" id="portfolio">
+    <div class="container" width="100%">
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <h1 class="masthead-heading text-uppercase mb-0">目前訂位狀況</h1>
+            <div class="divider-custom-line"></div>
+        </div>
+        <table class="mt-4" width="70%" align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>&nbsp;</p>
+                        <h2 class="page-section-heading text-center text-secondary mb-0">大螢幕</h2>
+                        <p>&nbsp;</p>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;</p>
+    <style>#tds table,#tds tr,#tds td{border:1px solid #000;}</style>
+    <table class ="mt-2" id="tds" width="80%" align="center" >
+    <span style="font-size: 30px"  >
+        <tbody>
+            <tr height="100px">
+                <td bgcolor="{{color[0]}}" class ="text-secondary">{{results[0]['SeatRow']}}-{{results[0]['SeatCol']}}</td>
+                <td bgcolor="{{color[1]}}" class ="text-secondary">{{results[1]['SeatRow']}}-{{results[1]['SeatCol']}}</td>
+                <td bgcolor="{{color[2]}}" class ="text-secondary">{{results[2]['SeatRow']}}-{{results[2]['SeatCol']}}</td>
+                <td bgcolor="{{color[3]}}" class ="text-secondary">{{results[3]['SeatRow']}}-{{results[3]['SeatCol']}}</td>
+                <td bgcolor="{{color[4]}}" class ="text-secondary">{{results[4]['SeatRow']}}-{{results[4]['SeatCol']}}</td>
+                <td bgcolor="{{color[5]}}" class ="text-secondary">{{results[5]['SeatRow']}}-{{results[5]['SeatCol']}}</td>
+                <td bgcolor="{{color[6]}}" class ="text-secondary">{{results[6]['SeatRow']}}-{{results[6]['SeatCol']}}</td>
+                <td bgcolor="{{color[7]}}" class ="text-secondary">{{results[7]['SeatRow']}}-{{results[7]['SeatCol']}}</td>
+            </tr>
+            <tr height="100px">
+                <td bgcolor="{{color[8]}}" class ="text-secondary">{{results[8]['SeatRow']}}-{{results[8]['SeatCol']}}</td>
+                <td bgcolor="{{color[9]}}" class ="text-secondary">{{results[9]['SeatRow']}}-{{results[9]['SeatCol']}}</td>
+                <td bgcolor="{{color[10]}}" class ="text-secondary">{{results[10]['SeatRow']}}-{{results[10]['SeatCol']}}</td>
+                <td bgcolor="{{color[11]}}" class ="text-secondary">{{results[11]['SeatRow']}}-{{results[11]['SeatCol']}}</td>
+                <td bgcolor="{{color[12]}}" class ="text-secondary">{{results[12]['SeatRow']}}-{{results[12]['SeatCol']}}</td>
+                <td bgcolor="{{color[13]}}" class ="text-secondary">{{results[13]['SeatRow']}}-{{results[13]['SeatCol']}}</td>
+                <td bgcolor="{{color[14]}}" class ="text-secondary">{{results[14]['SeatRow']}}-{{results[14]['SeatCol']}}</td>
+                <td bgcolor="{{color[15]}}" class ="text-secondary">{{results[15]['SeatRow']}}-{{results[15]['SeatCol']}}</td>
+            </tr>
+            <tr height="100px">
+                <td bgcolor="{{color[16]}}" class ="text-secondary">{{results[16]['SeatRow']}}-{{results[16]['SeatCol']}}</td>
+                <td bgcolor="{{color[17]}}" class ="text-secondary">{{results[17]['SeatRow']}}-{{results[17]['SeatCol']}}</td>
+                <td bgcolor="{{color[18]}}" class ="text-secondary">{{results[18]['SeatRow']}}-{{results[18]['SeatCol']}}</td>
+                <td bgcolor="{{color[19]}}" class ="text-secondary">{{results[19]['SeatRow']}}-{{results[19]['SeatCol']}}</td>
+                <td bgcolor="{{color[20]}}" class ="text-secondary">{{results[20]['SeatRow']}}-{{results[20]['SeatCol']}}</td>
+                <td bgcolor="{{color[21]}}" class ="text-secondary">{{results[21]['SeatRow']}}-{{results[21]['SeatCol']}}</td>
+                <td bgcolor="{{color[22]}}" class ="text-secondary">{{results[22]['SeatRow']}}-{{results[22]['SeatCol']}}</td>
+                <td bgcolor="{{color[23]}}" class ="text-secondary">{{results[23]['SeatRow']}}-{{results[23]['SeatCol']}}</td>
+            </tr>
+        </tbody>
+        </font>
+    </span>
+    </table>
+    <h5>有顏色的代表已經有訂位，若需取消預約請到現場辦理。</h5>
+    
+        
+    </div>
+    </section>
+    <section class="page-section bg-primary" id="contact">
+        <div class="container mb-5">
+            
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">訂位</h2>
+            
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <form id="contactForm" method="POST" action="{{url_for('test')}}" data-sb-form-api-token="API_TOKEN">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" name ="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">名字</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">須填寫名字</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="identity" name="identity"type="number" min ='1' max ='3' placeholder="(1)學生票，(2)成人票，(3)兒童票" data-sb-validations="required" />
+                            <label for="identity">(1)學生票，(2)成人票，(3)兒童票</label>
+                            <div class="invalid-feedback" data-sb-feedback="identity:required">須填寫身分別</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <div class="form-floating mb-3">
+                            
+                            <input class="form-control" width="50%" id="row" name="row" type="number" min ='1' max ='3' placeholder="第幾排" data-sb-validations="required" />
+                            <label for="row">排</label>
+                            <div class="invalid-feedback" data-sb-feedback="row:required">資料須填寫完畢</div>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                            
+                            <input class="form-control" width="50%" id="col" name="col" type="number" min ='1' max ='8' placeholder="第幾個" data-sb-validations="required" />
+                            <label for="col">個</label>
+                            <div class="invalid-feedback" data-sb-feedback="col:required">資料須填寫完畢</div>
+                        </div>
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">成功送出!</div>
+                            </div>
+                        </div>
+        
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                        <input type="submit" style="font-size:20px" value="確認購票"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">地址</h4>
+                    <p class="lead mb-0">
+                        台西市小由區月北里重二路
+                        <br />
+                        87巷87號
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">我們的網站</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="mb-4">資料來源:<br>https://reurl.cc/dGLO0M</h4>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
